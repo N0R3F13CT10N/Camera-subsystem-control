@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="static/js/script.js"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <title>RC camera stream</title>
+  </head>
+  <body>
+  <h1>RC camera stream</h1>
+  <div class="container-name">
+    <div class="div1"> <img src="{{ url_for('video_feed') }}">  </div>
+    <div class="div2">
+      <div>
+        <label class="horiz" id="horizAngle">Horizontal angle: </label>
+        <input class="up" id="btnUp" type="submit" value="Up"/>
+        <label class="vert" id="vertAngle">Vertical angle: </label>
+      </div>
+      <div>
+        <input class="left" id="btnLeft" type="submit" value="Left"/>
+        <input class="down" id="btnDown" type="submit" value="Down"/>
+        <input class="right" id="btnRight" type="submit" value="Right"/>
+      </div>
+      <div>
+        <input class="default" id="btnDefault" type="submit" value="Default"/>
+        <input class="toggle" id="btnToggleMode" type="submit" value="Toggle mode"/>
+        <label class="mode" id="mode">Manual mode</label>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
